@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca2eb3jbx3w7"]
+
+[ext_resource type="Texture2D" uid="uid://cq7polbnj2ne5" path="res://SNES - Street Fighter Alpha 2 - Stage 18.png" id="1_1c4lk"]
+[ext_resource type="Script" path="res://level.gd" id="2_47egt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ueioa"]
+size = Vector2(20, 190.561)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mxhk"]
+size = Vector2(20, 188.808)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhass"]
+size = Vector2(481.019, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8quv"]
+size = Vector2(481.019, 20)
+
+[node name="Node2D" type="Sprite2D"]
+position = Vector2(580, 322)
+scale = Vector2(2.59865, 3.42147)
+texture = ExtResource("1_1c4lk")
+script = ExtResource("2_47egt")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+position = Vector2(233.968, -0.292274)
+shape = SubResource("RectangleShape2D_ueioa")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2"]
+position = Vector2(-231.659, 0.584541)
+shape = SubResource("RectangleShape2D_1mxhk")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D3"]
+position = Vector2(0.384819, -105.218)
+shape = SubResource("RectangleShape2D_dhass")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D4"]
+position = Vector2(-2.69371, 105.218)
+shape = SubResource("RectangleShape2D_n8quv")

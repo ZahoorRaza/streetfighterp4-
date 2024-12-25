@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b7uoqtxp5x37i"
+path="res://.godot/imported/SNES - Street Fighter Alpha 2 - Stage 18.png-300df8326c2b24b5b6b5c1391c14dfb5.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://characters/SNES - Street Fighter Alpha 2 - Stage 18.png"
+dest_files=["res://.godot/imported/SNES - Street Fighter Alpha 2 - Stage 18.png-300df8326c2b24b5b6b5c1391c14dfb5.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

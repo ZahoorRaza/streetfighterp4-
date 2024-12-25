@@ -1,0 +1,104 @@
+[gd_scene load_steps=14 format=3 uid="uid://c1l5f6o7h0bso"]
+
+[ext_resource type="Texture2D" uid="uid://c5l0eopvsi8s8" path="res://characters/KO-Bar.png" id="1_1620b"]
+[ext_resource type="Texture2D" uid="uid://cc3tyx5q1cq6f" path="res://characters/whitesquare.png" id="1_iui6q"]
+[ext_resource type="Script" path="res://hud.gd" id="1_uex8h"]
+[ext_resource type="Texture2D" uid="uid://bpsf4ivto6ts3" path="res://characters/n0.png" id="2_g02w8"]
+[ext_resource type="Texture2D" uid="uid://dbota6s5ghyv" path="res://characters/n1.png" id="3_a8r0m"]
+[ext_resource type="Texture2D" uid="uid://bfi17hnpsh0jq" path="res://characters/n2.png" id="4_xkjd3"]
+[ext_resource type="Texture2D" uid="uid://dpjuoiic6au2p" path="res://characters/n3.png" id="5_gr7ot"]
+[ext_resource type="Texture2D" uid="uid://dofukibq5ytnb" path="res://characters/n4.png" id="6_xjag7"]
+[ext_resource type="Texture2D" uid="uid://dbk5cd5y54jjr" path="res://characters/n5.png" id="7_tbhn4"]
+[ext_resource type="Texture2D" uid="uid://bnijpsyf2tssy" path="res://characters/n6.png" id="8_g2n2u"]
+[ext_resource type="Texture2D" uid="uid://qxw81hho3g4m" path="res://characters/n7.png" id="9_qp571"]
+[ext_resource type="Texture2D" uid="uid://tsisdhs4wsso" path="res://characters/n8.png" id="10_qagf2"]
+[ext_resource type="Texture2D" uid="uid://7526mshpite2" path="res://characters/n9.png" id="11_q51gk"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -40.0
+offset_top = -61.0
+offset_right = -40.0
+offset_bottom = -61.0
+scale = Vector2(0.2, 0.3)
+script = ExtResource("1_uex8h")
+timeSprites = [ExtResource("2_g02w8"), ExtResource("3_a8r0m"), ExtResource("4_xkjd3"), ExtResource("5_gr7ot"), ExtResource("6_xjag7"), ExtResource("7_tbhn4"), ExtResource("8_g2n2u"), ExtResource("9_qp571"), ExtResource("10_qagf2"), ExtResource("11_q51gk")]
+
+[node name="KO_bar" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerHealth" type="TextureProgressBar" parent="KO_bar"]
+layout_mode = 0
+offset_left = -180.0
+offset_top = 11.0
+offset_right = -138.0
+offset_bottom = 43.0
+scale = Vector2(20, 1)
+value = 100.0
+allow_lesser = true
+texture_under = ExtResource("1_iui6q")
+texture_progress = ExtResource("1_iui6q")
+tint_under = Color(0.912676, 0.183358, 0.173787, 1)
+tint_progress = Color(0.900449, 0.61443, 0.031188, 1)
+
+[node name="AIHealth" type="TextureProgressBar" parent="KO_bar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -13.435
+anchor_top = -8.014
+anchor_right = -13.435
+anchor_bottom = -8.014
+offset_left = 1097.4
+offset_top = 333.56
+offset_right = 1129.4
+offset_bottom = 365.56
+scale = Vector2(20, 1)
+value = 100.0
+allow_lesser = true
+fill_mode = 1
+texture_under = ExtResource("1_iui6q")
+texture_progress = ExtResource("1_iui6q")
+tint_under = Color(0.913725, 0.184314, 0.172549, 1)
+tint_progress = Color(0.901961, 0.615686, 0.0313726, 1)
+
+[node name="HealthBar" type="TextureRect" parent="KO_bar"]
+layout_mode = 0
+offset_left = -180.0
+offset_right = 1210.0
+offset_bottom = 57.0
+texture = ExtResource("1_1620b")
+
+[node name="Timer" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 470.0
+offset_top = 60.0
+offset_right = 670.0
+offset_bottom = 143.0
+
+[node name="1s" type="TextureRect" parent="Timer"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 6.66667
+offset_right = 160.0
+offset_bottom = 73.6667
+texture = ExtResource("11_q51gk")
+
+[node name="10s" type="TextureRect" parent="Timer"]
+layout_mode = 0
+offset_left = -30.0
+offset_top = 6.66667
+offset_right = 55.0
+offset_bottom = 73.6667
+texture = ExtResource("11_q51gk")
+
+[node name="Timeuntil" type="Timer" parent="Timer"]
+
+[node name="Names" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="timeout" from="Timer/Timeuntil" to="." method="_on_timer_timeout"]

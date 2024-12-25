@@ -1,0 +1,153 @@
+[gd_scene load_steps=11 format=3 uid="uid://cu2nwn7nsl5xb"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_a6jl2"]
+[ext_resource type="FontFile" uid="uid://dc174neuuqff" path="res://UrbanJungle-yGnq.ttf" id="1_cdpov"]
+[ext_resource type="Texture2D" uid="uid://cbl72h372ogf" path="res://characters/ryu/victory poses/wind (4).png" id="2_4r5xf"]
+[ext_resource type="Script" path="res://play.gd" id="2_6p03o"]
+[ext_resource type="Script" path="res://manual.gd" id="3_fm8qs"]
+[ext_resource type="Script" path="res://exit.gd" id="4_2ntdj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey3iy"]
+size = Vector2(503.5, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i004f"]
+size = Vector2(500, 97)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_juols"]
+size = Vector2(505, 102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgeom"]
+size = Vector2(46, 34)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a6jl2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 652.0
+color = Color(0.768114, 0.542591, 0.342333, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.0
+offset_right = 53.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.824468, 0.338054, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.362829, 0.362829, 0.362829, 1)
+theme_override_colors/font_outline_color = Color(0.733063, 0.0130887, 0.496873, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/outline_size = 1
+theme_override_constants/shadow_outline_size = 10
+theme_override_fonts/font = ExtResource("1_cdpov")
+theme_override_font_sizes/font_size = 100
+text = "Street Fighter"
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 656.0
+offset_bottom = 323.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="play" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.207843, 0.14902, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_cdpov")
+theme_override_font_sizes/font_size = 80
+text = "PLAY
+"
+script = ExtResource("2_6p03o")
+
+[node name="Area2D" type="Area2D" parent="HBoxContainer/VBoxContainer/play"]
+collision_layer = 32
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/play/Area2D"]
+position = Vector2(249.25, 49)
+shape = SubResource("RectangleShape2D_ey3iy")
+
+[node name="manual" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.207843, 0.14902, 1)
+theme_override_fonts/font = ExtResource("1_cdpov")
+theme_override_font_sizes/font_size = 80
+text = "MANUAL
+"
+script = ExtResource("3_fm8qs")
+
+[node name="Area2D" type="Area2D" parent="HBoxContainer/VBoxContainer/manual"]
+collision_layer = 32
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/manual/Area2D"]
+position = Vector2(252, 50.5)
+shape = SubResource("RectangleShape2D_i004f")
+
+[node name="exit" type="Button" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.207843, 0.14902, 1)
+theme_override_fonts/font = ExtResource("1_cdpov")
+theme_override_font_sizes/font_size = 80
+text = "EXIT"
+script = ExtResource("4_2ntdj")
+
+[node name="Area2D" type="Area2D" parent="HBoxContainer/VBoxContainer/exit"]
+collision_layer = 32
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HBoxContainer/VBoxContainer/exit/Area2D"]
+position = Vector2(248.5, 51)
+shape = SubResource("RectangleShape2D_juols")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(800.5, 430.5)
+scale = Vector2(5.05556, 4.57292)
+texture = ExtResource("2_4r5xf")
+
+[node name="pointer" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pointer"]
+position = Vector2(242, 354)
+shape = SubResource("RectangleShape2D_cgeom")
+
+[connection signal="focus_entered" from="HBoxContainer/VBoxContainer/play" to="HBoxContainer/VBoxContainer/play" method="on_focus_entered"]
+[connection signal="focus_exited" from="HBoxContainer/VBoxContainer/play" to="HBoxContainer/VBoxContainer/play" method="on_focus_exit"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/play" to="HBoxContainer/VBoxContainer/play" method="on_pressed"]
+[connection signal="area_entered" from="HBoxContainer/VBoxContainer/play/Area2D" to="HBoxContainer/VBoxContainer/play" method="on_area2d_entered"]
+[connection signal="area_exited" from="HBoxContainer/VBoxContainer/play/Area2D" to="HBoxContainer/VBoxContainer/play" method="on_area2d_exit"]
+[connection signal="focus_entered" from="HBoxContainer/VBoxContainer/manual" to="HBoxContainer/VBoxContainer/manual" method="on_focus_entered"]
+[connection signal="focus_exited" from="HBoxContainer/VBoxContainer/manual" to="HBoxContainer/VBoxContainer/manual" method="on_focus_exit"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/manual" to="HBoxContainer/VBoxContainer/manual" method="on_pressed"]
+[connection signal="area_entered" from="HBoxContainer/VBoxContainer/manual/Area2D" to="HBoxContainer/VBoxContainer/manual" method="on_area2d_entered"]
+[connection signal="area_exited" from="HBoxContainer/VBoxContainer/manual/Area2D" to="HBoxContainer/VBoxContainer/manual" method="on_area2d_exit"]
+[connection signal="focus_entered" from="HBoxContainer/VBoxContainer/exit" to="HBoxContainer/VBoxContainer/exit" method="on_focus_entered"]
+[connection signal="focus_exited" from="HBoxContainer/VBoxContainer/exit" to="HBoxContainer/VBoxContainer/exit" method="on_focus_exit"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/exit" to="HBoxContainer/VBoxContainer/exit" method="on_pressed"]
+[connection signal="area_entered" from="HBoxContainer/VBoxContainer/exit/Area2D" to="HBoxContainer/VBoxContainer/exit" method="on_area2d_entered"]
+[connection signal="area_exited" from="HBoxContainer/VBoxContainer/exit/Area2D" to="HBoxContainer/VBoxContainer/exit" method="on_area2d_exit"]

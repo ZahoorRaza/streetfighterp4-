@@ -1,0 +1,249 @@
+[gd_scene load_steps=4 format=3 uid="uid://4pvafbffge3t"]
+
+[ext_resource type="Script" path="res://button_manual.gd" id="1_d8gh6"]
+[ext_resource type="FontFile" uid="uid://dc174neuuqff" path="res://UrbanJungle-yGnq.ttf" id="1_uhkvc"]
+[ext_resource type="FontFile" uid="uid://cfu37mg3u8ria" path="res://MetroMarks-G3KWm.otf" id="3_s3rme"]
+
+[node name="buttonManual" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d8gh6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.768627, 0.541176, 0.341176, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -29.5
+offset_right = 29.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.823529, 0.337255, 0, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 100
+text = "Manual"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 164.0
+offset_right = 670.0
+offset_bottom = 583.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "Punch"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "Kick"
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "High Punch"
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "High Kick"
+
+[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "crouch"
+
+[node name="Label6" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "left/right"
+
+[node name="Label7" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "crouch Punch"
+
+[node name="Label8" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "crouch Kick"
+
+[node name="Label9" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "Block"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 715.0
+offset_top = 160.0
+offset_right = 896.0
+offset_bottom = 579.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label10" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "E"
+
+[node name="Label11" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "R"
+
+[node name="Label12" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "W+E"
+
+[node name="Label13" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "W+R"
+
+[node name="Label14" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "S"
+
+[node name="Label15" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "A/D"
+
+[node name="Label16" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "C+E"
+
+[node name="Label17" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "C+R"
+
+[node name="Label18" type="Label" parent="HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.807856, 0.123407, 0.179092, 1)
+theme_override_colors/font_outline_color = Color(0.692151, 0.0721497, 0.719598, 1)
+theme_override_fonts/font = ExtResource("1_uhkvc")
+theme_override_font_sizes/font_size = 40
+text = "Q"
+
+[node name="exit" type="Label" parent="."]
+layout_mode = 0
+offset_right = 176.0
+offset_bottom = 80.0
+theme_override_colors/font_color = Color(0.968627, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.934801, 0, 0.463634, 1)
+theme_override_fonts/font = ExtResource("3_s3rme")
+theme_override_font_sizes/font_size = 60
+text = "ESC"
