@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name  raza
+class_name  levelReady
 
 @onready var myopponent = CharacterSelectionManager.opponent.instantiate()
 @onready  var myplayer = CharacterSelectionManager.player.instantiate()

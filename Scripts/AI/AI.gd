@@ -1,4 +1,4 @@
-extends raza
+extends levelReady
 
 
 var root: BTNode
