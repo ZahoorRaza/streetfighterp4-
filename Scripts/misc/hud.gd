@@ -4,7 +4,7 @@ extends Control
 @onready var player1HealthBar =  get_node("KO_bar/PlayerHealth")
 @onready var AIHealthBar = get_node("KO_bar/AIHealth")
 
-@onready var myHUD = preload("res://HUD.tscn")
+@onready var myHUD = preload("res://tscn_files/HUD.tscn")
 
 @onready var instantHUDFinal
 
@@ -91,4 +91,4 @@ func _process(delta: float) -> void:
 	if Engine.get_process_frames() % 500 == 0 and ((AIHealthBar.value  <= 0) or (player1HealthBar.value  <= 0)) :
 		CharacterSelectionManager.player1.queue_free()
 		CharacterSelectionManager.opponent1.queue_free()
-		get_tree().change_scene_to_file("res://characterselection.tscn")
+		get_tree().change_scene_to_file("res://tscn_files/characterselection.tscn")

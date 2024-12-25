@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+
+
+## All these parameters are passed to AI script to make it aware of players moves and conditions
 var is_HK = false
 var is_attacking = false
 var is_blocking = false

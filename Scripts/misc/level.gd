@@ -4,7 +4,7 @@ class_name  raza
 
 @onready var myopponent = CharacterSelectionManager.opponent.instantiate()
 @onready  var myplayer = CharacterSelectionManager.player.instantiate()
-@onready var instantiateHUD = preload("res://HUD.tscn").instantiate()
+@onready var instantiateHUD = preload("res://tscn_files/HUD.tscn").instantiate()
 func _ready():
 	
 	SpawnChosenCharacters()

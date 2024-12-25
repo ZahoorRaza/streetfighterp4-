@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://dew1vtww0hfds"]
 
-[ext_resource type="Script" path="res://characterselection.gd" id="1_2ufca"]
+[ext_resource type="Script" path="res://Scripts/misc/characterselection.gd" id="1_2ufca"]
 [ext_resource type="Texture2D" uid="uid://clujjqjmlv243" path="res://SelectionCursorPlayer1.png" id="1_22bbl"]
 [ext_resource type="Texture2D" uid="uid://bf3qhy5457t1w" path="res://RyuPortrait.png" id="1_oxrog"]
 [ext_resource type="Texture2D" uid="uid://f8krvd4c8foj" path="res://Chun-LiPortrait.png" id="2_rkc41"]
-[ext_resource type="Script" path="res://cursor.gd" id="2_vyf7b"]
+[ext_resource type="Script" path="res://Scripts/misc/cursor.gd" id="2_vyf7b"]
 [ext_resource type="Texture2D" uid="uid://cm1y37oky8tpb" path="res://SelectionCursorPlayer2.png" id="4_jy5g6"]
 [ext_resource type="Texture2D" uid="uid://dt2xpx5pilvvk" path="res://guilepotrait.PNG" id="7_5gxec"]
 [ext_resource type="Texture2D" uid="uid://dvbjt0g5hue11" path="res://KenPortrait.png" id="8_8jkbl"]

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+
+## All these parameters are passed to AI script to make it aware of players moves and conditions
 var is_attacking = false
 var is_blocking = false
 var is_crouching = false
@@ -8,8 +10,8 @@ var is_player_blocking = false
 var runspeed = 80
 var animation_finished = false
 var frame =0
-@onready var Sprites = $guilesprite
-@onready var anim = $guilesprite/guileplayer
+@onready var Sprites = $spritechun_li
+@onready var anim = $spritechun_li/chun_lianimationplayer
 @onready var crouch_collision = $CollisionShape2D
 var original_collision_size
 

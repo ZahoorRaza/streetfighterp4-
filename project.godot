@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="streetfighterP4/"
-run/main_scene="res://MainMenu.tscn"
+run/main_scene="res://tscn_files/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-CharacterSelectionManager="*res://CharacterSelectionManager.gd"
+CharacterSelectionManager="*res://Scripts/misc/CharacterSelectionManager.gd"
 
 [global_group]
 

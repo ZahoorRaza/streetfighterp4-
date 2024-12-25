@@ -2,9 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://dc174neuuqff" path="res://UrbanJungle-yGnq.ttf" id="1_cdpov"]
 [ext_resource type="Texture2D" uid="uid://cbl72h372ogf" path="res://characters/ryu/victory poses/wind (4).png" id="2_4r5xf"]
-[ext_resource type="Script" path="res://play.gd" id="2_6p03o"]
-[ext_resource type="Script" path="res://manual.gd" id="3_fm8qs"]
-[ext_resource type="Script" path="res://exit.gd" id="4_2ntdj"]
+[ext_resource type="Script" path="res://Scripts/misc/play.gd" id="2_6p03o"]
+[ext_resource type="Script" path="res://Scripts/misc/manual.gd" id="3_fm8qs"]
+[ext_resource type="Script" path="res://Scripts/misc/exit.gd" id="4_2ntdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ey3iy"]
 size = Vector2(503.5, 96)

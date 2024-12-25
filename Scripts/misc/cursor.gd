@@ -80,7 +80,7 @@ func _process(delta):
 		elif (CharacterSelectionManager.opponent == null):
 			CharacterSelectionManager.opponent = CharacterSelectionManager.selectableCharacters[characters[currentSelected].get_name()]
 			print(CharacterSelectionManager.opponent)
-			get_tree().change_scene_to_file("res://level.tscn")
+			get_tree().change_scene_to_file("res://tscn_files/level.tscn")
 		elif (CharacterSelectionManager.player != null) and texture == player1Text:
 			CharacterSelectionManager.player = CharacterSelectionManager.selectableCharacters[characters[currentSelected].get_name()]
 			print(CharacterSelectionManager.player)
@@ -88,4 +88,4 @@ func _process(delta):
 		elif (CharacterSelectionManager.opponent != null) and texture == player2Text:
 			CharacterSelectionManager.opponent = CharacterSelectionManager.selectableCharacters[characters[currentSelected].get_name()]
 			print(CharacterSelectionManager.opponent)
-			get_tree().change_scene_to_file("res://level.tscn")
+			get_tree().change_scene_to_file("res://tscn_files/level.tscn")

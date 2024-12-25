@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ca2eb3jbx3w7"]
 
 [ext_resource type="Texture2D" uid="uid://cq7polbnj2ne5" path="res://SNES - Street Fighter Alpha 2 - Stage 18.png" id="1_1c4lk"]
-[ext_resource type="Script" path="res://level.gd" id="2_47egt"]
+[ext_resource type="Script" path="res://Scripts/misc/level.gd" id="2_47egt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ueioa"]
 size = Vector2(20, 190.561)

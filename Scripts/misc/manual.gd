@@ -8,7 +8,7 @@ func on_focus_exit():
 	add_theme_color_override("font_color" ,Color(230,53,38))
 	
 func on_pressed():
-	get_tree().change_scene_to_file("res://buttonManual.tscn")
+	get_tree().change_scene_to_file("res://tscn_files/buttonManual.tscn")
 	
 func on_area2d_entered(area):
 	emit_signal("focus_entered")

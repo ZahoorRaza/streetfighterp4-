@@ -65,6 +65,7 @@ func _ready() -> void:
 	
 	
 	root.children = [
+					crouch_response_sequence,
 					crouch_response_forHK,
 					defensive_sequence,
 					block_reaction,
@@ -191,7 +192,7 @@ func crouch_attack():
 		
 
 
-	
+#used as a munever to make the AI perform diffrent varity of moves and add varity to moveset
 func ReturnChance():
 	var value = RandomNumberGenerator.new()
 	value.randomize()

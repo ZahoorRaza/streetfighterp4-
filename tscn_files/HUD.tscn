@@ -1,18 +1,18 @@
 [gd_scene load_steps=14 format=3 uid="uid://c1l5f6o7h0bso"]
 
-[ext_resource type="Texture2D" uid="uid://c5l0eopvsi8s8" path="res://characters/KO-Bar.png" id="1_1620b"]
-[ext_resource type="Texture2D" uid="uid://cc3tyx5q1cq6f" path="res://characters/whitesquare.png" id="1_iui6q"]
-[ext_resource type="Script" path="res://hud.gd" id="1_uex8h"]
-[ext_resource type="Texture2D" uid="uid://bpsf4ivto6ts3" path="res://characters/n0.png" id="2_g02w8"]
-[ext_resource type="Texture2D" uid="uid://dbota6s5ghyv" path="res://characters/n1.png" id="3_a8r0m"]
-[ext_resource type="Texture2D" uid="uid://bfi17hnpsh0jq" path="res://characters/n2.png" id="4_xkjd3"]
-[ext_resource type="Texture2D" uid="uid://dpjuoiic6au2p" path="res://characters/n3.png" id="5_gr7ot"]
-[ext_resource type="Texture2D" uid="uid://dofukibq5ytnb" path="res://characters/n4.png" id="6_xjag7"]
-[ext_resource type="Texture2D" uid="uid://dbk5cd5y54jjr" path="res://characters/n5.png" id="7_tbhn4"]
-[ext_resource type="Texture2D" uid="uid://bnijpsyf2tssy" path="res://characters/n6.png" id="8_g2n2u"]
-[ext_resource type="Texture2D" uid="uid://qxw81hho3g4m" path="res://characters/n7.png" id="9_qp571"]
-[ext_resource type="Texture2D" uid="uid://tsisdhs4wsso" path="res://characters/n8.png" id="10_qagf2"]
-[ext_resource type="Texture2D" uid="uid://7526mshpite2" path="res://characters/n9.png" id="11_q51gk"]
+[ext_resource type="Script" path="res://Scripts/misc/hud.gd" id="1_6p6jl"]
+[ext_resource type="Texture2D" uid="uid://bpsf4ivto6ts3" path="res://characters/n0.png" id="2_at221"]
+[ext_resource type="Texture2D" uid="uid://dbota6s5ghyv" path="res://characters/n1.png" id="3_h7pgr"]
+[ext_resource type="Texture2D" uid="uid://bfi17hnpsh0jq" path="res://characters/n2.png" id="4_4efaj"]
+[ext_resource type="Texture2D" uid="uid://dpjuoiic6au2p" path="res://characters/n3.png" id="5_hc4j8"]
+[ext_resource type="Texture2D" uid="uid://dofukibq5ytnb" path="res://characters/n4.png" id="6_rl1co"]
+[ext_resource type="Texture2D" uid="uid://dbk5cd5y54jjr" path="res://characters/n5.png" id="7_vfp8c"]
+[ext_resource type="Texture2D" uid="uid://bnijpsyf2tssy" path="res://characters/n6.png" id="8_ux45t"]
+[ext_resource type="Texture2D" uid="uid://qxw81hho3g4m" path="res://characters/n7.png" id="9_gj0au"]
+[ext_resource type="Texture2D" uid="uid://tsisdhs4wsso" path="res://characters/n8.png" id="10_o4swk"]
+[ext_resource type="Texture2D" uid="uid://7526mshpite2" path="res://characters/n9.png" id="11_ag0ci"]
+[ext_resource type="Texture2D" uid="uid://cc3tyx5q1cq6f" path="res://characters/whitesquare.png" id="12_brhcm"]
+[ext_resource type="Texture2D" uid="uid://c5l0eopvsi8s8" path="res://characters/KO-Bar.png" id="13_kh34d"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -22,8 +22,8 @@ offset_top = -61.0
 offset_right = -40.0
 offset_bottom = -61.0
 scale = Vector2(0.2, 0.3)
-script = ExtResource("1_uex8h")
-timeSprites = [ExtResource("2_g02w8"), ExtResource("3_a8r0m"), ExtResource("4_xkjd3"), ExtResource("5_gr7ot"), ExtResource("6_xjag7"), ExtResource("7_tbhn4"), ExtResource("8_g2n2u"), ExtResource("9_qp571"), ExtResource("10_qagf2"), ExtResource("11_q51gk")]
+script = ExtResource("1_6p6jl")
+timeSprites = [ExtResource("2_at221"), ExtResource("3_h7pgr"), ExtResource("4_4efaj"), ExtResource("5_hc4j8"), ExtResource("6_rl1co"), ExtResource("7_vfp8c"), ExtResource("8_ux45t"), ExtResource("9_gj0au"), ExtResource("10_o4swk"), ExtResource("11_ag0ci")]
 
 [node name="KO_bar" type="Control" parent="."]
 anchors_preset = 0
@@ -39,8 +39,8 @@ offset_bottom = 43.0
 scale = Vector2(20, 1)
 value = 100.0
 allow_lesser = true
-texture_under = ExtResource("1_iui6q")
-texture_progress = ExtResource("1_iui6q")
+texture_under = ExtResource("12_brhcm")
+texture_progress = ExtResource("12_brhcm")
 tint_under = Color(0.912676, 0.183358, 0.173787, 1)
 tint_progress = Color(0.900449, 0.61443, 0.031188, 1)
 
@@ -59,8 +59,8 @@ scale = Vector2(20, 1)
 value = 100.0
 allow_lesser = true
 fill_mode = 1
-texture_under = ExtResource("1_iui6q")
-texture_progress = ExtResource("1_iui6q")
+texture_under = ExtResource("12_brhcm")
+texture_progress = ExtResource("12_brhcm")
 tint_under = Color(0.913725, 0.184314, 0.172549, 1)
 tint_progress = Color(0.901961, 0.615686, 0.0313726, 1)
 
@@ -69,7 +69,7 @@ layout_mode = 0
 offset_left = -180.0
 offset_right = 1210.0
 offset_bottom = 57.0
-texture = ExtResource("1_1620b")
+texture = ExtResource("13_kh34d")
 
 [node name="Timer" type="Control" parent="."]
 anchors_preset = 0
@@ -84,7 +84,7 @@ offset_left = 70.0
 offset_top = 6.66667
 offset_right = 160.0
 offset_bottom = 73.6667
-texture = ExtResource("11_q51gk")
+texture = ExtResource("11_ag0ci")
 
 [node name="10s" type="TextureRect" parent="Timer"]
 layout_mode = 0
@@ -92,7 +92,7 @@ offset_left = -30.0
 offset_top = 6.66667
 offset_right = 55.0
 offset_bottom = 73.6667
-texture = ExtResource("11_q51gk")
+texture = ExtResource("11_ag0ci")
 
 [node name="Timeuntil" type="Timer" parent="Timer"]
 

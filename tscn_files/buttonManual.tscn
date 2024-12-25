@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://4pvafbffge3t"]
 
-[ext_resource type="Script" path="res://button_manual.gd" id="1_d8gh6"]
+[ext_resource type="Script" path="res://Scripts/misc/button_manual.gd" id="1_d8gh6"]
 [ext_resource type="FontFile" uid="uid://dc174neuuqff" path="res://UrbanJungle-yGnq.ttf" id="1_uhkvc"]
 [ext_resource type="FontFile" uid="uid://cfu37mg3u8ria" path="res://MetroMarks-G3KWm.otf" id="3_s3rme"]
 
